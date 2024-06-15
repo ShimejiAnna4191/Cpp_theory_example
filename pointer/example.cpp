@@ -28,7 +28,7 @@
 // }
 
 //ví dụ 2
-struct UesrnameID
+struct UesrnameID //I have never learning struct but anyway
 {
     std::string name{};
     int id{};
