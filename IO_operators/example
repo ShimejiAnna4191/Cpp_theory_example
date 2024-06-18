@@ -1,0 +1,68 @@
+#include <iostream>
+#include<limits>
+#include<optional>
+#include<string>
+#include<string_view>
+
+enum Color{
+    red,
+    green,
+    yellow,
+    blue,
+};
+
+constexpr std::string_view getcolor(Color color){
+    switch (color)
+    {
+    case red:
+        return "red";
+    case blue:
+        return "blue";
+    case yellow:
+        return "yellow";
+    case green:
+        return "green";
+    default:
+        return "?";
+    }
+}
+
+constexpr std::optional<Color> getcolorfromString(std::string_view sv){
+    if(sv == "red") return red;
+    if(sv == "blue") return blue;
+    if(sv == "green") return green;
+    if(sv == "yellow") return yellow;
+
+    return {};
+}
+
+std::istream& operator>>(std::istream& in, Color& color )
+{
+    std::string s{};
+    in >> s;
+    std::optional<Color> match {getcolorfromString(s)};
+    if(match){
+        color = *match;
+        return in;
+    }
+    else{
+        in.setstate(std::ios_base::failbit);
+    }
+    return in;
+}
+int main(){
+    std::cout<<"choise the color: "<<'\n';
+    Color color;
+    std::cin>>color;
+    if (std::cin)
+    {
+        std::cout<<"you cloise "<<getcolor(color)<<" color";
+    }
+    else
+    {
+        //std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+        std::cout<<"your color is not define";
+    }
+    return 0;
+}
