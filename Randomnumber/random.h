@@ -1,3 +1,4 @@
+// This code is copied from the library, not written by me
 #ifndef RANDOM_MT_H
 #define RANDOM_MT_H
 
