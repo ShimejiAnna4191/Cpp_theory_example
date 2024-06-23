@@ -26,5 +26,6 @@ int main(){
     Ivan.setPerson("Ivan");
 
     Anna.hug(Ivan);
+    //Ivan.hug (Anna);
     return 0;
 }
