@@ -20,7 +20,7 @@ struct Compary
         int id{};
     };
     std::string name{};
-    member CEO{}; //đặt kiểu member để có thế gọi struct member như dòng 28 bên dưới và nó được đặt trong {}
+    member CEO{}; //set member type to call struct member as line 28 below and it is placed in {}
 };
 
 
