@@ -1,7 +1,7 @@
-#include <optional>//để sử dụng std::optional
-#include <functional>//để sử dụng std::reference_wrapper
+#include <optional>//std::optional
+#include <functional>//std::reference_wrapper
 #include <iostream>
-#include <string>//để sử dung std::string
+#include <string>//std::string
 
 //ví dụ 1
 // struct UesrnameID
@@ -33,7 +33,8 @@ struct UesrnameID //I have never learning struct but anyway
     std::string name{};
     int id{};
 };
-void user(const UesrnameID* e=nullptr){ //sử dụng con trỏ UsernameID
+void user(const UesrnameID* e=nullptr) //use pointer UsernameID
+{ 
     if (e)
     {
         std::cout<<"your ID is: "<<e->id<<'\n'; 
@@ -48,6 +49,6 @@ int main(){
     user();
 
     UesrnameID Ivan {"Ivan", 18};
-    user(&Ivan); //đối với con trỏ thì phải sử dụng & để cho nó biết địa chỉ mà tìm
+    user(&Ivan); //For pointers, you must use the & syntax to tell it the address to look for
     return 0;
 }
