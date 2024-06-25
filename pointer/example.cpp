@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>//std::string
 
-//ví dụ 1
+// example 1
 // struct UesrnameID
 // {
 //     std::string name{};
@@ -27,7 +27,7 @@
 //     return 0;
 // }
 
-//ví dụ 2
+// example 2
 struct UesrnameID //I have never learning struct but anyway
 {
     std::string name{};
