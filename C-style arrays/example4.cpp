@@ -52,12 +52,7 @@ int main(){
     std::cout<< "Row: "<<arrView.countRow() <<"\n";
     std::cout<< "Cols: "<<arrView.countCol()<< "\n";
 
-    for (int i = 0; i < arrView.countLength(); i++)
-    {
-        std::cout<<arrView[i]<<' ';
-    }
-    std::cout<< "\n";
-
+    //print two-dimensional array
     for (int row = 0; row < arrView.countRow() ; row++)
     {
         for (int col = 0; col < arrView.countCol(); col++)
@@ -67,5 +62,15 @@ int main(){
         std::cout<< "\n";
     }
     std::cout<< "\n";
+
+    //Flatting two-dimensional array.... wait what? this is one-dimensional?
+    for (int i = 0; i < arrView.countLength(); i++)
+    {
+        std::cout<<arrView[i]<<' ';
+    }
+    std::cout<< "\n";
+
     return 0;
 }
+
+
