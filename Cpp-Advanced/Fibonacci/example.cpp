@@ -3,12 +3,12 @@
 int fibonacci(int n)
 {
     if (n == 0)
-    return 0;
+    return 0; //base case (termination condition)
 
     if (n==1)
     return 1;
 
-    else if(n > 1)
+    else if(n > 1) //base case (termination condition)
     return fibonacci(n-1) + fibonacci(n-2);
 }
 
